@@ -44,8 +44,29 @@
     </header>
 
     <main class="m-3">
-        <div class="container d-flex justify-content-around align-items-center rounded bg-body-tertiary">
-            
+        <div class="container rounded bg-body-tertiary p-2">
+
+            <div class="searchDiv m-3">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Search for pokemons</label>
+                    <form class="d-flex">
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Search">
+                        <button class="btn btn-outline-primary ms-2" type="button">Search</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="cardDiv d-flex justify-content-center">
+                <!--navrh karticky-->
+                <div class="card m-3 mb-4" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Name</h5>
+                      <p class="card-text">Rank and more</p>
+                      <button type="button" class="btn btn-primary"><img src="../src/svg/star.svg" alt="star"></button>
+                    </div>
+                  </div>
+            </div>
         </div>
     </main>
 
