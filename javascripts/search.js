@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     function card(img, name, rank){
         let text = `
-        <div class="card m-3 mb-4" style="width: 15rem;">
+        <div class="card m-3 mb-4 cards" style="width: 15rem;">
         <img src="${img}" class="card-img-top" alt="${name}">
             <div class="card-body">
                 <h5 class="card-title">Name: ${name}</h5>
@@ -24,6 +24,7 @@ $(document).ready(function(){
             success: function (result) {
               console.log(result);
               $(".errorMsg").css("display","none");
+              $(".cards").remove();
               $(".cardDiv").append(card(result.sprites.front_default, result.name, result.id));
             },
             error: function (error) {
