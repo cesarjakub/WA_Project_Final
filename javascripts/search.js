@@ -3,11 +3,11 @@ $(document).ready(function(){
 
     function card(img, name, rank){
         let text = `
-        <div class="card m-3 mb-4" style="width: 18rem;">
+        <div class="card m-3 mb-4" style="width: 15rem;">
         <img src="${img}" class="card-img-top" alt="${name}">
             <div class="card-body">
-                <h5 class="card-title">Name> ${name}</h5>
-                <p class="card-text">Rank> ${rank}</p>
+                <h5 class="card-title">Name: ${name}</h5>
+                <p class="card-text">Rank: ${rank}</p>
                 <button type="button" class="btn btn-primary"><img src="../src/svg/star.svg" alt="star"></button>
             </div>
         </div>`;
@@ -23,9 +23,12 @@ $(document).ready(function(){
             },
             success: function (result) {
               console.log(result);
+              $(".errorMsg").css("display","none");
+              $(".cardDiv").append(card(result.sprites.front_default, result.name, result.id));
             },
             error: function (error) {
                 console.log(error);
+                $(".errorMsg").css("display","block");
             },
         });
     }
