@@ -910,7 +910,7 @@ $(document).ready(function () {
 
 
   function card(img, name, id) {
-    let text = `<div class="card m-3 mb-4" style="width: 18rem;">
+    let text = `<div class="karticka card m-3 mb-4" style="width: 18rem;">
             <img src="${img}" class="card-img-top" alt="${name}">
                 <div class="card-body">
                    <h5 class="card-title">Name: ${name}</h5>
@@ -944,4 +944,5 @@ $(document).ready(function () {
   for (let i = 0; i < pokemonsPole.length; i++) {
     getIDFromAPI(pokemonsPole[i]);
   }
+
 });
