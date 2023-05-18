@@ -7,10 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.karticka:hover{
-    transform: translateY(-10);
-    
-}
 
 @media only screen and (max-width: 600px) {
     #pikachuIMG{
