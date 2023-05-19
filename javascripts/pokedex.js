@@ -931,7 +931,6 @@ $(document).ready(function () {
         id,
       },
       success: function (result) {
-        console.log(result);
         $(".cardTable").append(
           card(result.sprites.front_default, result.name, result.id)
         );
@@ -942,7 +941,6 @@ $(document).ready(function () {
     });
   }
 
-  console.log(pokemonsPole);
 
   function printCards(){
     for (let i = page; i < currentCards; i++) {
@@ -955,7 +953,6 @@ $(document).ready(function () {
   $(".loadMoreBtn").on("click", function(){
     currentCards+=20;
     page+=20;
-    console.log(currentCards);
     printCards();
   });
 
