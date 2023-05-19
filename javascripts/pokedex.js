@@ -908,6 +908,9 @@ $(document).ready(function () {
     "enamorus",
   ];
 
+  let currentCards = 20;
+  let page = 0;
+
 
   function card(img, name, id) {
     let text = `<div class="karticka card m-3 mb-4" style="width: 18rem;">
@@ -941,8 +944,21 @@ $(document).ready(function () {
 
   console.log(pokemonsPole);
 
-  for (let i = 0; i < pokemonsPole.length; i++) {
-    getIDFromAPI(pokemonsPole[i]);
+  function printCards(){
+    for (let i = page; i < currentCards; i++) {
+      getIDFromAPI(pokemonsPole[i]);
+    }
   }
+
+  printCards();
+
+  $(".loadMoreBtn").on("click", function(){
+    currentCards+=20;
+    page+=20;
+    console.log(currentCards);
+    printCards();
+  });
+
+
 
 });
