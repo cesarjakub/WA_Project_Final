@@ -3,7 +3,7 @@ $(document).ready(function () {
   let currentCards = 20;
   let page = 0;
 
-
+  $(".karticka").hover().animate({top: '50px'}, 400);
   function card(img, name, id) {
     let text = `<div class="karticka card m-3 mb-4" style="width: 18rem;">
             <img src="${img}" class="card-img-top" alt="${name}">
@@ -52,7 +52,6 @@ $(document).ready(function () {
   });
 
   
-
 
 
 });
