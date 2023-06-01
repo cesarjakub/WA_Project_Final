@@ -13,11 +13,17 @@
 }
 
 .pokeimg #pikachuIMG {
-    transition: transform 0.3s ease-out;
+    animation: bounce 2s ease infinite;
 }
-  
-.pokeimg:hover #pikachuIMG {
-    transform: scale(1.2);
+
+@keyframes bounce {
+    70% { transform:translateY(0%); }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
 }
 
 @media only screen and (max-width: 600px) {
