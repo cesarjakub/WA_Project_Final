@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 
+    <link rel="shortcut icon" href="../src/img/icon.JPG" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
     <script src="../javascripts/pokedex.js" defer></script>
 
