@@ -22,7 +22,6 @@
             <?php
                 include "db_conn.php";
                 
-                $pocet;
                 if (isset($_POST["login"])) {
                     $username = $_POST["username"];
                     $pass = $_POST["password"];
@@ -41,19 +40,6 @@
                             echo "<div class='alert alert-danger m-3 errorMsg' role='alert'>
                         Password is wrong
                         </div>";
-                        $pocet = $pocet + 1;
-                        if ($failedAttempts >= 3) {
-                            $file = '../logFile.txt';
-                            $message = $username+" se snaží přihlásit";
-
-                            $fileHandle = fopen($file, 'a');
-
-                            fwrite($fileHandle, $message . "\n");
-
-                            fclose($fileHandle);
-
-                            $pocet = 0;
-                        }
                         }
                     }else{
                         echo "<div class='alert alert-danger m-3 errorMsg' role='alert'>
