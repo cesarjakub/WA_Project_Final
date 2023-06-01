@@ -58,10 +58,24 @@
     <main class="m-3">
         <div class="container d-flex justify-content-around align-items-center rounded bg-body-tertiary" style="height: 75vh;">
             <div class="m-4">
-                <h3 class="ms-3 anim">Get Started</h3>
+                    <?php
+                        session_start();
+                        if(!isset($_SESSION["user"])){
+                            echo "<h3 class='ms-3 anim'>Get Started</h3>";
+                        }else{
+                            echo "<h3 class='ms-3 anim'>Welcome to my page :)</h3>";
+                        }
+                    ?>
                 <div class="d-flex flex-wrap">
-                    <a href="login_reg/login.php" class="btn btn-primary my-1 ms-3 px-5" role="button">Login</a>
-                    <a href="login_reg/register.php" class="btn btn-primary my-1 ms-3 px-5" role="button">Register</a>
+                    <?php
+                        session_start();
+                        if(!isset($_SESSION["user"])){
+                            echo "<a href='login_reg/login.php' class='btn btn-primary my-1 ms-3 px-5' role='button'>Login</a>",
+                            "<a href='login_reg/register.php' class='btn btn-primary my-1 ms-3 px-5' role='button'>Register</a>";
+                        }else{
+                            echo "<a href='login_reg/logout.php' class='btn btn-primary my-1 ms-3 px-5' role='button'>Logout</a>";
+                        }
+                    ?>
                 </div>
             </div>
             <div class="pokeimg">
