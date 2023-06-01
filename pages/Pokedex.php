@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <link rel="shortcut icon" href="../src/img/icon.JPG" type="image/x-icon">
+    <link rel="shortcut icon" href="../src/img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
     <script src="../javascripts/pokedex.js" defer></script>
 
@@ -20,7 +20,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-md">
                 <div class="container-fluid">
-                    <img src="../src/img/icon.JPG" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
+                    <img src="../src/img/icon.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
                     <a class="navbar-brand" href="index.html">Pokemon Library</a>
                 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">

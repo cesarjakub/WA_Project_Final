@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-<link rel="shortcut icon" href="src/img/icon.JPG" type="image/x-icon">
+<link rel="shortcut icon" href="src/img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -18,7 +18,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-md">
                 <div class="container-fluid">
-                    <img src="src/img/icon.JPG" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
+                    <img src="src/img/icon.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
                     <a class="navbar-brand" href="index.php">Pokemon Library</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
