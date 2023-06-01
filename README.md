@@ -41,3 +41,6 @@ jmeno a hashnuté heslo do databáze po dokončení registrace se může uživat
 2. nahrajete na xampp server
 3. potom otevřete svuj oblíbeny webový prohlížeč a napište localhost/WA_Project_Final
 4. nakonec se vám otevře moje stránka
+
+### Chybí
+1. local storage -> nepřišlo mi vhodné implementovat na stránku
