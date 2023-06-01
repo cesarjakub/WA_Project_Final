@@ -35,9 +35,21 @@
                             <li class="nav-item">
                                 <a class="nav-link text-black" href="SearchPokemon.php">Search</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-black" href="../login_reg/login.php">Login</a>
-                            </li>
+                            <?php
+                                session_start();
+                                if(!isset($_SESSION["user"])){
+                                    echo "<li class='nav-item'>
+                                    <a class='nav-link text-black' href='login_reg/login.php'>Login</a>
+                                    </li>";
+                                    if(!isset($_SESSION["user"]) || $_SESSION["user"] !== true){
+                                        header("Location: ../index.php");
+                                    }
+                                }else{
+                                    echo "<li class='nav-item'>
+                                        <a class='nav-link text-black' href='../login_reg/logout.php'>LogOut</a>
+                                        </li>";
+                                }
+                            ?>
                         </ul>
                     </div>
                 </div>

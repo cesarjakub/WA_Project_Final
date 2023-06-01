@@ -8,7 +8,6 @@ $(document).ready(function(){
             <div class="card-body">
                 <h5 class="card-title">Name: ${name}</h5>
                 <p class="card-text">Rank: ${rank}</p>
-                <button type="button" class="btn btn-primary"><img src="../src/svg/star.svg" alt="star"></button>
             </div>
         </div>`;
         return text;

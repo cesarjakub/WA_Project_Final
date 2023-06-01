@@ -17,7 +17,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-md">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">Pokemon Library</a>
+                    <a class="navbar-brand" href="index.php">Pokemon Library</a>
                 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -27,12 +27,8 @@
                             <li class="nav-item">
                                 <a class="nav-link active text-black" href="index.php">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-black" href="pages/Pokedex.php">Pokédex</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-black" href="pages/SearchPokemon.php">Search</a>
-                            </li>
+                            
+                            
                             <?php
                                 session_start();
                                 if(!isset($_SESSION["user"])){
@@ -41,8 +37,14 @@
                                     </li>";
                                 }else{
                                     echo "<li class='nav-item'>
-                                    <a class='nav-link text-black' href='login_reg/logout.php'>LogOut</a>
-                                </li>";
+                                        <a class='nav-link text-black' href='pages/Pokedex.php'>Pokédex</a>
+                                        </li>",
+                                        "<li class='nav-item'>
+                                        <a class='nav-link text-black' href='pages/SearchPokemon.php'>Search</a>
+                                        </li>",
+                                        "<li class='nav-item'>
+                                        <a class='nav-link text-black' href='login_reg/logout.php'>LogOut</a>
+                                        </li>";
                                 }
                             ?>
                         </ul>
@@ -55,7 +57,7 @@
     <main class="m-3">
         <div class="container d-flex justify-content-around align-items-center rounded bg-body-tertiary" style="height: 75vh;">
             <div class="m-4">
-                <h3 class="ms-3">Get Started</h3>
+                <h3 class="ms-3 anim">Get Started</h3>
                 <div class="d-flex flex-wrap">
                     <a href="login_reg/login.php" class="btn btn-primary my-1 ms-3 px-5" role="button">Login</a>
                     <a href="login_reg/register.php" class="btn btn-primary my-1 ms-3 px-5" role="button">Register</a>
@@ -65,6 +67,7 @@
                 <img src="src/img/pikachu.png" class="pikaimg" id="pikachuIMG" alt="pikachu">
             </div>
         </div>
+        
     </main>
 
     <div class="container">

@@ -20,6 +20,7 @@
         <div class="container rounded bg-body-tertiary">
             <?php
                 include "db_conn.php";
+
                 if (isset($_POST["login"])) {
                     $username = $_POST["username"];
                     $pass = $_POST["password"];
@@ -36,12 +37,12 @@
                             die();
                         }else{
                             echo "<div class='alert alert-danger m-3 errorMsg' role='alert'>
-                        Password is wrong;
+                        Password is wrong
                         </div>";
                         }
                     }else{
                         echo "<div class='alert alert-danger m-3 errorMsg' role='alert'>
-                        Username is wrong;
+                        Username is wrong
                         </div>";
                     }
                 }
