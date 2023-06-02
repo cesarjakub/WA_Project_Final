@@ -27,23 +27,14 @@
                 $pass = $_POST["pass"];
                 $passrep = $_POST["passrep"];
 
-                $errors = array();
 
                 $passhash = password_hash($pass, PASSWORD_DEFAULT);
 
                 if(strlen($pass)<8){
-                    array_push($errors, "Password must be 8 character");
-                }
-                if($pass!==$passrep){
-                    array_push($errors, "Password does not match");
-                }
-
-                if(count($errors)>0){
-                    foreach ($errors as $error) {
-                        echo "<div class='alert alert-danger m-3' role='alert'>$error</div>";
-                    }
+                    echo "<div class='alert alert-danger m-3' role='alert'>Password must be 8 character</div>";
+                }else if($pass!==$passrep){
+                    echo "<div class='alert alert-danger m-3' role='alert'>Password does not match</div>";
                 }else{
-                    //require_once "db_conn.php";
                     $sqlInsert = "INSERT INTO users(username, password) VALUES('$userName', '$passhash')";
                     if (mysqli_query($conn, $sqlInsert)) {
                         echo "<div class='alert alert-success m-3' role='alert'>You are registered successfully.</div>";
