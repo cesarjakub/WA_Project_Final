@@ -38,8 +38,20 @@
                             die();
                         }else{
                             echo "<div class='alert alert-danger m-3 errorMsg' role='alert'>
-                        Password is wrong
-                        </div>";
+                            Password is wrong
+                            </div>";
+                            
+                            session_start();
+                            $loginAttempts = isset($_SESSION["login_attempts"]) ? $_SESSION["login_attempts"] : 0;
+                            $loginAttempts++;
+                            $_SESSION["login_attempts"] = $loginAttempts;
+
+                            if ($loginAttempts >= 3) {
+                                $file = fopen("logFile.txt", "a") or die("Unable to open file!");
+                                $txt = $username . " dosáhl tří neúspěšných pokusů o přihlášení\n";
+                                fwrite($file, $txt);
+                                fclose($file);
+                            }
                         }
                     }else{
                         echo "<div class='alert alert-danger m-3 errorMsg' role='alert'>
